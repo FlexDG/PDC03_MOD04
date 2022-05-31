@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD04.activity3"
+             Title="Listview - Itemsource">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="SkyBlue" Padding="24" Margin="10,5,10,10" CornerRadius="20">
+                <Label Text="Welcome to Valorant's Mini Overview of Items!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+
+
+            <CollectionView x:Name="SourceView" ItemsSource="{Binding Sources}"
+                            SelectionMode="Multiple" BackgroundColor="AliceBlue">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="6" HorizontalItemSpacing="6"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.RowSpan="2" 
+                                   Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Name}"
+                                   FontAttributes="Bold" TextColor="violet"
+                                   FontSize="Medium"/>
+                            <Label Grid.Row="1" Grid.Column="1"
+                                   Text="{Binding Details}" TextColor="DarkBlue"/>
+
+                        </Grid>
+
+
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD4.MainPage">
+
+    <StackLayout Margin="10,0,10,0" HorizontalOptions="FillAndExpand" Spacing="20">
+        <Frame BackgroundColor="SkyBlue" Padding="24" Margin="10,5,0,20" CornerRadius="20">
+            <Label Text="Welcome to De Guzman's Module 04 Activities!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Button Text="Act 01 - listView" Clicked ="Activity01"  BackgroundColor="DeepSkyBlue" TextColor="White" CornerRadius="30"/>
+        <Button Text="Act 02 - ListView (ItemSource)" Clicked="Activity02"  BackgroundColor="DeepSkyBlue" TextColor="White" CornerRadius="30"/>
+        <Button Text="Act 03 - CollectionView (ItemSource)" Clicked="Activity03"  BackgroundColor="DeepSkyBlue" TextColor="White" CornerRadius="30"/>
+    </StackLayout>
+
+</ContentPage>

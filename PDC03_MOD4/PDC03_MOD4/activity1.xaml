@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD4.activity1" BackgroundColor="DeepSkyBlue">
+    <ContentPage.Content>
+        <StackLayout Margin="10,0,10,0" HorizontalOptions="FillAndExpand" Spacing="20">
+            <Frame BackgroundColor="SkyBlue" Padding="24" Margin="10,5,0,20" CornerRadius="20">
+                <Label Text="Welcome to Valorant's Mini Overview of Items!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+
+
+            <ListView BackgroundColor="Azure" RowHeight="50">
+                <ListView.ItemsSource>
+
+                    <x:Array Type="{x:Type x:String}">
+
+                        <x:String>Vandal</x:String>
+
+
+                        <x:String>Phantom</x:String>
+
+
+                        <x:String>Drone</x:String>
+
+
+                        <x:String>Singularity</x:String>
+
+                        <x:String>Sova</x:String>
+
+
+                        <x:String>Jett</x:String>
+                        
+                        
+                    </x:Array>
+              
+    
+</ListView.ItemsSource>
+           </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD04.activityy02"
+             Title="Listview - Itemsource">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="SkyBlue" Padding="24" Margin="10,5,10,10" CornerRadius="20">
+                <Label Text="Welcome to Valorant's Mini Overview of Items!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+
+
+
+            <ListView x:Name="SourceView"
+                      ItemsSource="{Binding Sources}"
+                      RowHeight="100" BackgroundColor="Azure">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ImageCell ImageSource="{Binding Image}"  Text="{Binding Name}" TextColor="Black" Detail="{Binding Details}" DetailColor="Red"/>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
